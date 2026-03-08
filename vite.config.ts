@@ -27,6 +27,13 @@ export default defineConfig(() => {
       __QWIK_VERSION__: JSON.stringify(qwikVersion),
       __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     },
+    // pg is a Node.js-only module used in the server-side onGet handler.
+    // Marking it as an SSR external prevents it from being bundled into
+    // the client build, avoiding browser compatibility warnings.
+    ssr: {
+      noExternal: [],
+      external: ['pg', 'pg-pool', 'pg-connection-string', 'pgpass'],
+    },
     preview: {
       headers: {
         'Cache-Control': 'public, max-age=600',
