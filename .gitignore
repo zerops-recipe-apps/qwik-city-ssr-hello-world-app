@@ -1,0 +1,7 @@
+node_modules/
+dist/
+server/
+.qwik/
+*.tsbuildinfo
+.env
+.env.local
