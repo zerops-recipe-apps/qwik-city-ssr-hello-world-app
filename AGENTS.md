@@ -1,12 +1,12 @@
 # qwik-city-ssr-hello-world-app
 
-Qwik City SSR app using the Express adapter and PostgreSQL on Zerops nodejs@22, with a two-pass Vite build.
+Qwik City SSR app using the Express adapter and PostgreSQL on Zerops nodejs@24, with a two-pass Vite build.
 
 ## Zerops service facts
 
 - HTTP port: `3000`
 - Siblings: `db` (PostgreSQL) — env: `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASS`, `DB_NAME`
-- Runtime base: `nodejs@22`
+- Runtime base: `nodejs@24`
 
 ## Zerops dev
 
