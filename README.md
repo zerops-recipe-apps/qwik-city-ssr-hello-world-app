@@ -29,7 +29,7 @@ zerops:
   # dev: full source deployed for interactive SSH development.
   - setup: prod
     build:
-      base: nodejs@22
+      base: nodejs@24
       # Ubuntu build environment: Vite/Rollup requires glibc binaries
       # unavailable on Alpine's musl libc during the build phase.
       os: ubuntu
@@ -58,7 +58,7 @@ zerops:
           path: /
 
     run:
-      base: nodejs@22
+      base: nodejs@24
       # initCommands run on every container start, before the app starts.
       # Migrations run here (not in buildCommands) so schema changes and
       # code deploy atomically — no mismatch if deploy rolls back.
@@ -82,7 +82,7 @@ zerops:
 
   - setup: dev
     build:
-      base: nodejs@22
+      base: nodejs@24
       # Ubuntu for dev: richer toolset for SSH-based development workflows.
       os: ubuntu
       buildCommands:
@@ -94,7 +94,7 @@ zerops:
         - node_modules
 
     run:
-      base: nodejs@22
+      base: nodejs@24
       os: ubuntu
       initCommands:
         # Migration still runs in dev — database is ready when SSH opens.
